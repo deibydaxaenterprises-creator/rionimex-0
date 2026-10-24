@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#07090b">
+  <meta name="description" content="Streaming de RIONIMEX STUDIOS: descubre historias, animación y entretenimiento.">
+  <title>Streaming | RIONIMEX STUDIOS</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/catalogo-stream.css">
+</head>
+<body class="catalog-page stream-catalog">
+  <div id="loader">
+    <img class="loader-mark" src="favicon.svg" alt="">
+    <div class="loader-logo">RIONIMEX</div>
+    <div class="loader-bar"><span></span></div>
+  </div>
+
+  <header class="header" id="header">
+    <a class="brand" href="index.html" aria-label="Rionimex">
+      <span class="brand-mark"><img src="favicon.svg" alt=""></span>
+      <span>RIONIMEX</span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+    <nav class="nav" id="nav">
+      <a href="index.html">Inicio</a>
+      <a href="servicios.html">Servicios</a>
+      <a href="estudio.html">Estudio</a>
+      <a href="comunidad.html">Comunidad</a>
+      <a href="apoyo.html">Apoyo</a>
+      <a href="contacto.html">Contacto</a>
+      <a class="nav-catalog-cta active" href="streaming.html" aria-current="page">Streaming</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="stream-spotlight" aria-labelledby="spotlight-title">
+      <div class="spotlight-backdrop" aria-hidden="true">
+        <span class="spotlight-grid"></span>
+        <span class="spotlight-glow"></span>
+      </div>
+
+      <div class="spotlight-inner">
+        <div class="spotlight-copy">
+          <p class="spotlight-eyebrow"><span></span> SERIES · ANIME · CARTOONS</p>
+          <h1 id="spotlight-title">TODO EL<br><em>ENTRETENIMIENTO</em><br>EN UN SOLO<br><em>LUGAR.</em></h1>
+          <p class="spotlight-description">Rionimex: Desde Latinoamérica para el mundo.
+          </p>
+          <a class="spotlight-cta" href="#explorar">EXPLORAR CATÁLOGO <span aria-hidden="true">↗</span>
+          </a>
+          <div class="spotlight-signature">
+            <span></span> RIONIMEX STUDIOS <b>/</b>
+          </div>
+          <p class="spotlight-platforms-label"><span aria-hidden="true"></span> DISTRIBUIDORAS OFICIALES</p>
+          <div class="spotlight-platforms" aria-label="Plataformas de streaming">
+            <img src="img-distribuidoras/NETFLIX.webp" data-brand="netflix" alt="" />
+            <img src="img-distribuidoras/DISNEYPLUS.webp" data-brand="disney+" alt="" />
+            <img src="img-distribuidoras/PARAMOUNTPLUS.webp" data-brand="paramount+" alt="" />
+            <img src="img-distribuidoras/HBOMAX.webp" data-brand="hbo max" alt="" />
+            <img src="img-distribuidoras/PRIMEVIDEO.webp" data-brand="prime video" alt="" />
+            <img src="img-distribuidoras/CRUNCHYROLL.webp" data-brand="crunchyroll" alt="" />
+            <img src="img-distribuidoras/PLUTOTV.webp" data-brand="pluto tv" alt="" />
+          </div>
+          <p class="spotlight-platforms-label"><span aria-hidden="true"></span> ENTIDADES AUDIOVISUALES</p>
+          <div class="spotlight-platforms" aria-label="Plataformas de streaming">
+            <img src="img-entidades/ROVIO.webp" data-entity="rovio" alt="" />
+            <img src="img-entidades/RTVCPLAY.webp" data-entity="rtvcplay" alt="" />
+            <img src="img-entidades/ANIMACCORD.webp" data-entity="animaccord" alt="" />
+            <img src="img-entidades/YT.webp" data-entity="yt" alt="" />
+          </div>
+        </div>
+
+        <div class="spotlight-art">
+          <img src="logo.png" alt="Logo de Rionimex Studios" />
+        </div>
+      </div>
+    </section>
+
+    <section class="stream-section" id="explorar">
+      <div class="stream-section-head catalog-section-heading">
+        <div class="catalog-section-intro">
+          <span class="catalog-section-kicker"><i></i> RIONIMEX STUDIOS <b>/</b> CATÁLOGO</span>
+          <h2>Explora el catálogo completo de <span>Rionimex.</span></h2>
+          <p>Explora las categorías y vive el entretenimiento.</p>
+        </div>
+        <div class="catalog-filter">
+          <button
+            class="catalog-filter-toggle"
+            id="catalogFilterToggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="catalogFilterPanel"
+          >
+            <span aria-hidden="true">☷</span> Filtros <span class="filter-count" id="filterCount" hidden>0</span>
+          </button>
+          <div class="catalog-filter-panel" id="catalogFilterPanel" hidden>
+            <fieldset class="catalog-filter-group">
+              <legend>Categorías</legend>
+              <label class="catalog-filter-option">
+                <input type="checkbox" name="category" value="all" checked>
+                <span>Todas las categorías</span>
+              </label>
+              <label class="catalog-filter-option">
+                <input type="checkbox" name="category" value="series">
+                <span>Series</span>
+              </label>
+              <label class="catalog-filter-option">
+                <input type="checkbox" name="category" value="anime">
+                <span>Anime</span>
+              </label>
+              <label class="catalog-filter-option">
+                <input type="checkbox" name="category" value="cartoons">
+                <span>Cartoons</span>
+              </label>
+            </fieldset>
+            <fieldset class="catalog-filter-group">
+              <legend>Distribuidoras</legend>
+              <div class="catalog-brand-options" id="catalogBrandOptions"></div>
+            </fieldset>
+            <fieldset class="catalog-filter-group">
+              <legend>Entidades</legend>
+              <div class="catalog-brand-options" id="catalogEntityOptions"></div>
+            </fieldset>
+            <fieldset class="catalog-filter-group">
+              <legend>Acceso</legend>
+              <label class="catalog-filter-option">
+                <input type="checkbox" name="access" value="all" checked>
+                <span>Todos los accesos</span>
+              </label>
+              <label class="catalog-filter-option">
+                <input type="checkbox" name="access" value="gratis">
+                <span>Gratis</span>
+              </label>
+              <label class="catalog-filter-option">
+                <input type="checkbox" name="access" value="suscripcion">
+                <span>Suscripción</span>
+              </label>
+            </fieldset>
+            <button class="catalog-filter-reset" id="catalogFilterReset" type="button">Restablecer filtros y búsqueda</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="catalog-search">
+        <label class="sr-only" for="catalogSearch">Buscar series por nombre o palabras clave</label>
+        <div class="catalog-search-box">
+          <svg class="catalog-search-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none">
+            <circle cx="10.8" cy="10.8" r="6.8"></circle>
+            <path d="m16 16 4.2 4.2"></path>
+          </svg>
+          <input
+            id="catalogSearch"
+            type="search"
+            placeholder="Buscar series por nombre o palabras clave..."
+            autocomplete="off"
+          >
+        </div>
+      </div>
+
+      <div class="stream-pagination-wrap">
+        <nav class="stream-pagination" aria-label="Paginación superior del catálogo"></nav>
+      </div>
+
+      <div class="stream-page-quick">
+        <button type="button" class="stream-page-trigger" aria-label="Ir a una página" title="Ir a una página">IR A LA PÁGINA</button>
+      </div>
+
+      <div class="stream-page-modal" aria-hidden="true">
+        <div class="stream-page-modal-card" role="dialog" aria-modal="true" aria-labelledby="stream-page-modal-title">
+          <button type="button" class="stream-page-close" aria-label="Cerrar">×</button>
+          <h3 id="stream-page-modal-title">Ir a la página</h3>
+          <p>Escribe el número de página que quieres abrir.</p>
+          <form class="stream-page-form" action="#">
+            <input id="stream-page-input" type="number" min="1" step="1" inputmode="numeric" placeholder="1">
+            <button type="submit">IR</button>
+          </form>
+          <div class="stream-page-error" aria-live="polite"></div>
+        </div>
+      </div>
+
+      <div class="stream-grid">
+        
+        <article class="stream-card reveal" data-type="cartoons" data-brand="disney+" data-access="suscripcion">
+          <a class="stream-poster" href="https://www.disneyplus.com/es-co/browse/entity-8220ebf4-997c-4874-816d-4fdaa82c4ebb" target="_blank" rel="noopener noreferrer" aria-label="Explorar DISNEY+">
+            <span class="stream-access-badge"><span class="stream-platform">SUSCRIPCIÓN</span></span>
+            <img class="stream-cover" src="img-streaming-2/MIRACULOUS-LAS-AVENTURAS-DE-LADYBUG.webp" alt="" loading="lazy" decoding="async">
+            <span class="stream-top"><span class="stream-platform">DISNEY+</span></span>
+            <span hidden>
+              <span class="stream-title">MIRACULOUS LAS AVENTURAS DE LADYBUG</span>
+            </span>
+          </a>
+        </article>
+        
+        <article class="stream-card reveal" data-type="cartoons" data-entity="rtvcplay" data-access="gratis">
+          <a class="stream-poster" href="https://rtvcplay.co/ninos/guillermina-y-candelario" target="_blank" rel="noopener noreferrer" aria-label="Explorar RTVCPLAY">
+            <span class="stream-access-badge"><span class="stream-platform">GRATIS</span></span>
+            <img class="stream-cover" src="img-streaming-2/GUILLERMINA-Y-CANDELARIO.webp" alt="" loading="lazy" decoding="async">
+            <span class="stream-top"><span class="stream-platform">RTVCPLAY</span></span>
+            <span hidden>
+              <span class="stream-title">GUILLERMINA Y CANDELARIO</span>
+            </span>
+          </a>
+        </article>
+
+        <article class="stream-card reveal" data-type="cartoons" data-entity="yt" data-access="gratis">
+          <a class="stream-poster" href="https://youtube.com/playlist?list=PLKccZ8-QqLvTUAv9pqBuVoevgC_3PGugB&si=vO9C_acVdeLG3CPZ" target="_blank" rel="noopener noreferrer" aria-label="Explorar YT">
+            <span class="stream-access-badge"><span class="stream-platform">GRATIS</span></span>
+            <img class="stream-cover" src="img-streaming-2/EL-PAJARO-LOCO.webp" alt="" loading="lazy" decoding="async">
+            <span class="stream-top"><span class="stream-platform">YT</span></span>
+            <span hidden>
+              <span class="stream-title">EL PAJARO LOCO</span>
+            </span>
+          </a>
+        </article>
+
+        <article class="stream-card reveal" data-type="cartoons" data-brand="hbo max" data-access="suscripcion">
+          <a class="stream-poster" href="https://www.hbomax.com/co/es/show/7998ac24-bc58-436b-9e6a-98b104954112" target="_blank" rel="noopener noreferrer" aria-label="Explorar HBO MAX">
+            <span class="stream-access-badge"><span class="stream-platform">SUSCRIPCIÓN</span></span>
+            <img class="stream-cover" src="img-streaming-2/EL-SHOW-DE-TOM-Y-JERRY.webp" alt="" loading="lazy" decoding="async">
+            <span class="stream-top"><span class="stream-platform">HBO MAX</span></span>
+            <span hidden>
+              <span class="stream-title">EL SHOW DE TOM Y JERRY</span>
+            </span>
+          </a>
+        </article>
+
+        <article class="stream-card reveal" data-type="cartoons" data-entity="yt" data-access="gratis">
+          <a class="stream-poster" href="https://www.youtube.com/@panterarosalatino5899/playlists" target="_blank" rel="noopener noreferrer" aria-label="Explorar YT">
+            <span class="stream-access-badge"><span class="stream-platform">GRATIS</span></span>
+            <img class="stream-cover" src="img-streaming-2/LA-PANTERA-ROSA.webp" alt="" loading="lazy" decoding="async">
+            <span class="stream-top"><span class="stream-platform">YT</span></span>
+            <span hidden>
+              <span class="stream-title">LA PANTERA ROSA</span>
+            </span>
+          </a>
+        </article>
+
+        <article class="stream-card reveal" data-type="cartoons" data-brand="hbo max" data-access="suscripcion">
+          <a class="stream-poster" href="https://www.hbomax.com/co/es/show/e90f1b95-4825-4f3d-bbe2-4cbc82dc7229" target="_blank" rel="noopener noreferrer" aria-label="Explorar HBO MAX">
+            <span class="stream-access-badge"><span class="stream-platform">SUSCRIPCIÓN</span></span>
+            <img class="stream-cover" src="img-streaming-2/LOONEY-TUNES-CARTOONS.webp" alt="" loading="lazy" decoding="async">
+            <span class="stream-top"><span class="stream-platform">HBO MAX</span></span>
+            <span hidden>
+              <span class="stream-title">LOONEY TUNES CARTOONS</span>
+            </span>
+          </a>
+        </article>
+
+        <article class="stream-card reveal" data-type="cartoons" data-brand="disney+" data-access="suscripcion">
+          <a class="stream-poster" href="https://www.disneyplus.com/es-co/browse/entity-cac75c8f-a9e2-4d95-ac73-1cf1cc7b9568" target="_blank" rel="noopener noreferrer" aria-label="Explorar DISNEY+">
+            <span class="stream-access-badge"><span class="stream-platform">SUSCRIPCIÓN</span></span>
+            <img class="stream-cover" src="img-streaming-2/LOS-SIMPSON.webp" alt="" loading="lazy" decoding="async">
+            <span class="stream-top"><span class="stream-platform">DISNEY+</span></span>
+            <span hidden>
+              <span class="stream-title">LOS SIMPSON</span>
+            </span>
+          </a>
+        </article>
+
+        <article class="stream-card reveal" data-type="anime" data-brand="crunchyroll" data-access="suscripcion">
+          <a class="stream-poster" href="https://www.crunchyroll.com/es/series/G8DHV7W21/dragon-ball" target="_blank" rel="noopener noreferrer" aria-label="Explorar CRUNCHYROLL">
+            <span class="stream-access-badge"><span class="stream-platform">SUSCRIPCIÓN</span></span>
+            <img class="stream-cover" src="img-streaming-2/DRAGON-BALL.webp" alt="" loading="lazy" decoding="async">
+            <span class="stream-top"><span class="stream-platform">CRUNCHYROLL</span></span>
+            <span hidden>
+              <span class="stream-title">DRAGON BALL</span>
+            </span>
+          </a>
+        </article>
+
+        <article class="stream-card reveal" data-type="cartoons" data-brand="pluto tv" data-access="gratis">
+          <a class="stream-poster" href="https://pluto.tv/latam/shows/spongebob-squarepants-las-ptv1/" target="_blank" rel="noopener noreferrer" aria-label="Explorar PLUTO TV">
+            <span class="stream-access-badge"><span class="stream-platform">GRATIS</span></span>
+            <img class="stream-cover" src="img-streaming-2/BOB-ESPONJA.webp" alt="" loading="lazy" decoding="async">
+            <span class="stream-top"><span class="stream-platform">PLUTO TV</span></span>
+            <span hidden>
+              <span class="stream-title">BOB ESPONJA</span>
+            </span>
+          </a>
+        </article>
+
+        <article class="stream-card reveal" data-type="cartoons" data-entity="yt" data-access="gratis">
+          <a class="stream-poster" href="https://www.youtube.com/@LosCuentosDeLosHermanosGrimm/playlists" target="_blank" rel="noopener noreferrer" aria-label="Explorar YT">
+            <span class="stream-access-badge"><span class="stream-platform">GRATIS</span></span>
+            <img class="stream-cover" src="img-streaming-2/CUENTOS-DE-LOS-HERMANOS-GRIMM.webp" alt="" loading="lazy" decoding="async">
+            <span class="stream-top"><span class="stream-platform">YT</span></span>
+            <span hidden>
+              <span class="stream-title">LOS CUENTOS DE LOS HERMANOS GRIMM</span>
+            </span>
+          </a>
+        </article>
+
+        <article class="stream-card reveal" data-type="cartoons" data-entity="yt" data-access="gratis">
+          <a class="stream-poster" href="https://www.youtube.com/@JorgeElCuriosoEnEspanol/playlists" target="_blank" rel="noopener noreferrer" aria-label="Explorar YT">
+            <span class="stream-access-badge"><span class="stream-platform">GRATIS</span></span>
+            <img class="stream-cover" src="img-streaming-2/JORGE-EL-CURIOSO.webp" alt="" loading="lazy" decoding="async">
+            <span class="stream-top"><span class="stream-platform">YT</span></span>
+            <span hidden>
+              <span class="stream-title">JORGE EL CURIOSO</span>
+            </span>
+          </a>
+        </article>
+
+        <article class="stream-card reveal" data-type="cartoons" data-entity="yt" data-access="gratis">
+          <a class="stream-poster" href="https://youtube.com/playlist?list=PLKccZ8-QqLvRHoIBHFP4_Y44WhnFJyMyu&si=krnruKwYrl9r-ihJ" target="_blank" rel="noopener noreferrer" aria-label="Explorar YT">
+            <span class="stream-access-badge"><span class="stream-platform">GRATIS</span></span>
+            <img class="stream-cover" src="img-streaming-2/CHILLY-WILLY.webp" alt="" loading="lazy" decoding="async">
+            <span class="stream-top"><span class="stream-platform">YT</span></span>
+            <span hidden>
+              <span class="stream-title">CHILLY WILLY</span>
+            </span>
+          </a>
+        </article>
+
+        <article class="stream-card reveal" data-type="cartoons" data-brand="pluto tv" data-access="gratis">
+          <a class="stream-poster" href="https://pluto.tv/latam/shows/the-fairly-oddparents-lt/" target="_blank" rel="noopener noreferrer" aria-label="Explorar PLUTO TV">
+            <span class="stream-access-badge"><span class="stream-platform">GRATIS</span></span>
+            <img class="stream-cover" src="img-streaming-2/LOS-PADRINOS-MAGICOS.webp" alt="" loading="lazy" decoding="async">
+            <span class="stream-top"><span class="stream-platform">PLUTO TV</span></span>
+            <span hidden>
+              <span class="stream-title">LOS PADRINOS MAGICOS</span>
+            </span>
+          </a>
+        </article>
+
+        <article class="stream-card reveal" data-type="cartoons" data-brand="disney+" data-access="suscripcion">
+          <a class="stream-poster" href="https://www.disneyplus.com/es-co/browse/entity-4da7fce0-527a-41c8-b6ef-35b2aae22143" target="_blank" rel="noopener noreferrer" aria-label="Explorar DISNEY+">
+            <span class="stream-access-badge"><span class="stream-platform">SUSCRIPCIÓN</span></span>
+            <img class="stream-cover" src="img-streaming-2/PATOAVENTURAS.webp" alt="" loading="lazy" decoding="async">
+            <span class="stream-top"><span class="stream-platform">DISNEY+</span></span>
+            <span hidden>
+              <span class="stream-title">PATOAVENTURAS</span>
+            </span>
+          </a>
+        </article>
+
+        <article class="stream-card reveal" data-type="cartoons" data-brand="disney+" data-access="suscripcion">
+          <a class="stream-poster" href="https://www.disneyplus.com/es-co/browse/entity-671bc3fd-114f-4044-986b-b961ca527024" target="_blank" rel="noopener noreferrer" aria-label="Explorar DISNEY+">
+            <span class="stream-access-badge"><span class="stream-platform">SUSCRIPCIÓN</span></span>
+            <img class="stream-cover" src="img-streaming-2/PHINEAS-Y-FERB.webp" alt="" loading="lazy" decoding="async">
+            <span class="stream-top"><span class="stream-platform">DISNEY+</span></span>
+            <span hidden>
+              <span class="stream-title">PHINEAS Y FERB</span>
+            </span>
+          </a>
+        </article>
+
+        <article class="stream-card reveal" data-type="cartoons" data-brand="hbo max" data-access="suscripcion">
+          <a class="stream-poster" href="https://www.hbomax.com/co/es/show/78b6fa0c-47c4-4fdf-ad77-67a407efd900" target="_blank" rel="noopener noreferrer" aria-label="Explorar HBO MAX">
+            <span class="stream-access-badge"><span class="stream-platform">SUSCRIPCIÓN</span></span>
+            <img class="stream-cover" src="img-streaming-1/BEN-10.webp" alt="" loading="lazy" decoding="async">
+            <span class="stream-top"><span class="stream-platform">HBO MAX</span></span>
+            <span hidden>
+              <span class="stream-title">BEN 10</span>
+            </span>
+          </a>
+        </article>
+
+        <article class="stream-card reveal" data-type="anime" data-brand="pluto tv" data-access="gratis">
+          <a class="stream-poster" href="https://pluto.tv/latam/shows/naruto-las-1-ptv2/" target="_blank" rel="noopener noreferrer" aria-label="Explorar PLUTO TV">
+            <span class="stream-access-badge"><span class="stream-platform">GRATIS</span></span>
+            <img class="stream-cover" src="img-streaming-1/NARUTO.webp" alt="" loading="lazy" decoding="async">
+            <span class="stream-top"><span class="stream-platform">PLUTO TV</span></span>
+            <span hidden>
+              <span class="stream-title">NARUTO</span>
+            </span>
+          </a>
+        </article>
+
+        <article class="stream-card reveal" data-type="cartoons" data-entity="yt" data-access="gratis">
+          <a class="stream-poster" href="https://youtube.com/playlist?list=PLjXyTw1_uY7NKDZdfdmHQNqLfKvVccru4&si=94LVyjD8yfmmF7Y9" target="_blank" rel="noopener noreferrer" aria-label="Explorar YT">
+            <span class="stream-access-badge"><span class="stream-platform">GRATIS</span></span>
+            <img class="stream-cover" src="img-streaming-1/LOS-BACKYARDIGANS.webp" alt="" loading="lazy" decoding="async">
+            <span class="stream-top"><span class="stream-platform">YT</span></span>
+            <span hidden>
+              <span class="stream-title">LOS BACKYARDIGANS</span>
+            </span>
+          </a>
+        </article>
+
+        <article class="stream-card reveal" data-type="cartoons" data-brand="pluto tv" data-access="gratis">
+          <a class="stream-poster" href="https://pluto.tv/latam/shows/mr-bean-animated-latam/" target="_blank" rel="noopener noreferrer" aria-label="Explorar PLUTO TV">
+            <span class="stream-access-badge"><span class="stream-platform">GRATIS</span></span>
+            <img class="stream-cover" src="img-streaming-1/MR-BEAN-LA-SERIE-ANIMADA.webp" alt="" loading="lazy" decoding="async">
+            <span class="stream-top"><span class="stream-platform">PLUTO TV</span></span>
+            <span hidden>
+              <span class="stream-title">MR BEAN LA SERIE ANIMADA</span>
+            </span>
+          </a>
+        </article>
+
+        <article class="stream-card reveal" data-type="cartoons" data-brand="pluto tv" data-access="gratis">
+          <a class="stream-poster" href="https://pluto.tv/latam/shows/the-penguins-of-madagascar-lt/" target="_blank" rel="noopener noreferrer" aria-label="Explorar PLUTO TV">
+            <span class="stream-access-badge"><span class="stream-platform">GRATIS</span></span>
+            <img class="stream-cover" src="img-streaming-1/LOS-PINGUINOS-DE-MADAGASCAR.webp" alt="" loading="lazy" decoding="async">
+            <span class="stream-top"><span class="stream-platform">PLUTO TV</span></span>
+            <span hidden>
+              <span class="stream-title">LOS PINGUINOS DE MADAGASCAR</span>
+            </span>
+          </a>
+        </article>
+
+        <article class="stream-card reveal" data-type="cartoons" data-brand="hbo max" data-access="suscripcion">
+          <a class="stream-poster" href="https://www.hbomax.com/co/es/show/b5228b0a-d96a-41bd-b52c-4056862b0991" target="_blank" rel="noopener noreferrer" aria-label="Explorar HBO MAX">
+            <span class="stream-access-badge"><span class="stream-platform">SUSCRIPCIÓN</span></span>
+            <img class="stream-cover" src="img-streaming-1/PEPPA-PIG.webp" alt="" loading="lazy" decoding="async">
+            <span class="stream-top"><span class="stream-platform">HBO MAX</span></span>
+            <span hidden>
+              <span class="stream-title">PEPPA PIG</span>
+            </span>
+          </a>
+        </article>
+
+        <article class="stream-card reveal" data-type="cartoons" data-brand="hbo max" data-access="suscripcion">
+          <a class="stream-poster" href="https://www.hbomax.com/co/es/show/fff09eaf-17c3-446b-be32-8a0d47e4ccf1" target="_blank" rel="noopener noreferrer" aria-label="Explorar HBO MAX">
+            <span class="stream-access-badge"><span class="stream-platform">SUSCRIPCIÓN</span></span>
+            <img class="stream-cover" src="img-streaming-1/HORA-DE-AVENTURA.webp" alt="" loading="lazy" decoding="async">
+            <span class="stream-top"><span class="stream-platform">HBO MAX</span></span>
+            <span hidden>
+              <span class="stream-title">HORA DE AVENTURAS | ADVENTURE TIME</span>
+            </span>
+          </a>
+        </article>
+
+        <article class="stream-card reveal" data-type="cartoons" data-brand="hbo max" data-access="suscripcion">
+          <a class="stream-poster" href="https://www.hbomax.com/co/es/show/1ce7cec4-c452-465a-89f6-0f50e613f9d0" target="_blank" rel="noopener noreferrer" aria-label="Explorar HBO MAX">
+            <span class="stream-access-badge"><span class="stream-platform">SUSCRIPCIÓN</span></span>
+            <img class="stream-cover" src="img-streaming-1/UN-SHOW-MAS.webp" alt="" loading="lazy" decoding="async">
+            <span class="stream-top"><span class="stream-platform">HBO MAX</span></span>
+            <span hidden>
+              <span class="stream-title">UN SHOW MAS | REGULAR SHOW</span>
+            </span>
+          </a>
+        </article>
+
+        <article class="stream-card reveal" data-type="cartoons" data-brand="hbo max" data-access="suscripcion">
+          <a class="stream-poster" href="https://www.hbomax.com/co/es/show/18ad0649-f2dd-410d-8842-2ba2aa486fdb" target="_blank" rel="noopener noreferrer" aria-label="Explorar HBO MAX">
+            <span class="stream-access-badge"><span class="stream-platform">SUSCRIPCIÓN</span></span>
+            <img class="stream-cover" src="img-streaming-1/EL-MARAVILLOSO-MUNDO-DE-GUMBALL.webp" alt="" loading="lazy" decoding="async">
+            <span class="stream-top"><span class="stream-platform">HBO MAX</span></span>
+            <span hidden>
+              <span class="stream-title">EL MARAVILLOSO MUNDO DE GUMBALL | EL INCREIBLE MUNDO DE GUMBALL |  EL ASOMBROSO MUNDO DE GUMBALL</span>
+            </span>
+          </a>
+        </article>
+
+        <article class="stream-card reveal" data-type="cartoons" data-brand="disney+" data-access="suscripcion">
+          <a class="stream-poster" href="https://www.disneyplus.com/es-co/browse/entity-9995dda1-d70a-4d15-98ba-72f1d10fa406" target="_blank" rel="noopener noreferrer" aria-label="Explorar DISNEY+">
+            <span class="stream-access-badge"><span class="stream-platform">SUSCRIPCIÓN</span></span>
+            <img class="stream-cover" src="img-streaming-1/GRAVITY-FALLS.webp" alt="" loading="lazy" decoding="async">
+            <span class="stream-top"><span class="stream-platform">DISNEY+</span></span>
+            <span hidden>
+              <span class="stream-title">GRAVITY FALLS</span>
+            </span>
+          </a>
+        </article>
+
+        <article class="stream-card reveal" data-type="cartoons" data-brand="hbo max" data-access="suscripcion">
+          <a class="stream-poster" href="https://www.hbomax.com/co/es/show/eb66748d-f7f2-458a-aa7b-488e2fb8bef1" target="_blank" rel="noopener noreferrer" aria-label="Explorar HBO MAX">
+            <span class="stream-access-badge"><span class="stream-platform">SUSCRIPCIÓN</span></span>
+            <img class="stream-cover" src="img-streaming-1/STEVEN-UNIVERSE.webp" alt="" loading="lazy" decoding="async">
+            <span class="stream-top"><span class="stream-platform">HBO MAX</span></span>
+            <span hidden>
+              <span class="stream-title">STEVEN UNIVERSE</span>
+            </span>
+          </a>
+        </article>
+
+        <article class="stream-card reveal" data-type="cartoons" data-brand="hbo max" data-access="suscripcion">
+          <a class="stream-poster" href="https://www.hbomax.com/co/es/show/bbf38e08-8288-4594-88e3-e982a0dbf809" target="_blank" rel="noopener noreferrer" aria-label="Explorar HBO MAX">
+            <span class="stream-access-badge"><span class="stream-platform">SUSCRIPCIÓN</span></span>
+            <img class="stream-cover" src="img-streaming-1/CLARENCE.webp" alt="" loading="lazy" decoding="async">
+            <span class="stream-top"><span class="stream-platform">HBO MAX</span></span>
+            <span hidden>
+              <span class="stream-title">CLARENCE</span>
+            </span>
+          </a>
+        </article>
+
+        <article class="stream-card reveal" data-type="cartoons" data-brand="hbo max" data-access="suscripcion">
+          <a class="stream-poster" href="https://www.hbomax.com/co/es/show/d93e40b9-21c1-48e3-a0c8-28dfb2eaa9f1" target="_blank" rel="noopener noreferrer" aria-label="Explorar HBO MAX">
+            <span class="stream-access-badge"><span class="stream-platform">SUSCRIPCIÓN</span></span>
+            <img class="stream-cover" src="img-streaming-1/ESCANDALOSOS.webp" alt="" loading="lazy" decoding="async">
+            <span class="stream-top"><span class="stream-platform">HBO MAX</span></span>
+            <span hidden>
+              <span class="stream-title">ESCANDALOSOS</span>
+            </span>
+          </a>
+        </article>
+
+        <article class="stream-card reveal" data-type="cartoons" data-brand="hbo max" data-access="suscripcion">
+          <a class="stream-poster" href="https://www.hbomax.com/co/es/show/c706d141-342d-4fe5-8d60-638e42a908fa" target="_blank" rel="noopener noreferrer" aria-label="Explorar HBO MAX">
+            <span class="stream-access-badge"><span class="stream-platform">SUSCRIPCIÓN</span></span>
+            <img class="stream-cover" src="img-streaming-1/EL-MUNDO-DE-CRAIG.webp" alt="" loading="lazy" decoding="async">
+            <span class="stream-top"><span class="stream-platform">HBO MAX</span></span>
+            <span hidden>
+              <span class="stream-title">EL MUNDO DE CRAIG</span>
+            </span>
+          </a>
+        </article>
+
+        <article class="stream-card reveal" data-type="cartoons" data-brand="disney+" data-access="suscripcion">
+          <a class="stream-poster" href="https://www.disneyplus.com/es-co/browse/entity-d772d3ad-b8d8-4f85-a6a7-ede8452db70b" target="_blank" rel="noopener noreferrer" aria-label="Explorar DISNEY+">
+            <span class="stream-access-badge"><span class="stream-platform">SUSCRIPCIÓN</span></span>
+            <img class="stream-cover" src="img-streaming-1/STAR-VS-LAS-FUERZAS-DEL-MAL.webp" alt="" loading="lazy" decoding="async">
+            <span class="stream-top"><span class="stream-platform">DISNEY+</span></span>
+            <span hidden>
+              <span class="stream-title">STAR VS LAS FUERZAS DEL MAL</span>
+            </span>
+          </a>
+        </article>
+
+        <article class="stream-card reveal" data-type="cartoons" data-brand="hbo max" data-access="suscripcion">
+          <a class="stream-poster" href="https://www.hbomax.com/co/es/show/ab553cdc-e15d-4597-b65f-bec9201fd2dd" target="_blank" rel="noopener noreferrer" aria-label="Explorar HBO MAX">
+            <span class="stream-access-badge"><span class="stream-platform">SUSCRIPCIÓN</span></span>
+            <img class="stream-cover" src="img-streaming-1/RICK-Y-MORTY.webp" alt="" loading="lazy" decoding="async">
+            <span class="stream-top"><span class="stream-platform">HBO MAX</span></span>
+            <span hidden>
+              <span class="stream-title">RICK Y MORTY</span>
+            </span>
+          </a>
+        </article>
+
+        <article class="stream-card reveal" data-type="cartoons" data-brand="netflix" data-access="suscripcion">
+          <a class="stream-poster" href="https://www.netflix.com/co/title/70252973" target="_blank" rel="noopener noreferrer" aria-label="Explorar NETFLIX">
+            <span class="stream-access-badge"><span class="stream-platform">SUSCRIPCIÓN</span></span>
+            <img class="stream-cover" src="img-streaming-1/NINJAGO.webp" alt="" loading="lazy" decoding="async">
+            <span class="stream-top"><span class="stream-platform">NETFLIX</span></span>
+            <span hidden>
+              <span class="stream-title">LEGO NINJAGO</span>
+            </span>
+          </a>
+        </article>
+
+        <article class="stream-card reveal" data-type="cartoons" data-brand="pluto tv" data-access="gratis">
+          <a class="stream-poster" href="https://pluto.tv/latam/shows/beyblade-burst-lt/" target="_blank" rel="noopener noreferrer" aria-label="Explorar PLUTO TV">
+            <span class="stream-access-badge"><span class="stream-platform">GRATIS</span></span>
+            <img class="stream-cover" src="img-streaming-1/BEYBLADE-BURST.webp" alt="" loading="lazy" decoding="async">
+            <span class="stream-top"><span class="stream-platform">PLUTO TV</span></span>
+            <span hidden>
+              <span class="stream-title">BEYBLADE BURST</span>
+            </span>
+          </a>
+        </article>
+
+        <article class="stream-card reveal" data-type="cartoons" data-entity="yt" data-access="gratis">
+          <a class="stream-poster" href="https://youtube.com/playlist?list=PLgfN-GXuV6shJva5S6sr7Tf1RD8S2e2Wd&si=YVlen4jgDExWnFur" target="_blank" rel="noopener noreferrer" aria-label="Explorar YT">
+            <span class="stream-access-badge"><span class="stream-platform">GRATIS</span></span>
+            <img class="stream-cover" src="img-streaming-1/MY-LITTLE-PONY-LA-MAGIA-DE-LA-AMISTAD.webp" alt="" loading="lazy" decoding="async">
+            <span class="stream-top"><span class="stream-platform">YT</span></span>
+            <span hidden>
+              <span class="stream-title">MY LITTLE PONY LA MAGIA DE LA AMISTAD</span>
+            </span>
+          </a>
+        </article>
+
+        <article class="stream-card reveal" data-type="cartoons" data-brand="hbo max" data-access="suscripcion">
+          <a class="stream-poster" href="https://www.hbomax.com/co/es/show/28cb33be-0a53-4604-a4eb-0562593798aa" target="_blank" rel="noopener noreferrer" aria-label="Explorar HBO MAX">
+            <span class="stream-access-badge"><span class="stream-platform">SUSCRIPCIÓN</span></span>
+            <img class="stream-cover" src="img-streaming-1/LOS-JOVENES-TITANES-EN-ACCION.webp" alt="" loading="lazy" decoding="async">
+            <span class="stream-top"><span class="stream-platform">HBO MAX</span></span>
+            <span hidden>
+              <span class="stream-title">LOS JOVENES TITANES EN ACCION | TEEN TITANS GO</span>
+            </span>
+          </a>
+        </article>
+
+        <article class="stream-card reveal" data-type="cartoons" data-brand="pluto tv" data-access="gratis">
+          <a class="stream-poster" href="https://pluto.tv/latam/shows/the-loud-house-ptv4/" target="_blank" rel="noopener noreferrer" aria-label="Explorar PLUTO TV">
+            <span class="stream-access-badge"><span class="stream-platform">GRATIS</span></span>
+            <img class="stream-cover" src="img-streaming-1/THE-LOUD-HOUSE.webp" alt="" loading="lazy" decoding="async">
+            <span class="stream-top"><span class="stream-platform">PLUTO TV</span></span>
+            <span hidden>
+              <span class="stream-title">THE LOUD HOUSE</span>
+            </span>
+          </a>
+        </article>
+
+        <article class="stream-card reveal" data-type="cartoons" data-brand="pluto tv" data-access="gratis">
+          <a class="stream-poster" href="https://pluto.tv/latam/shows/the-casagrandes-ptv5/" target="_blank" rel="noopener noreferrer" aria-label="Explorar PLUTO TV">
+            <span class="stream-access-badge"><span class="stream-platform">GRATIS</span></span>
+            <img class="stream-cover" src="img-streaming-1/LOS-CASAGRANDES.webp" alt="" loading="lazy" decoding="async">
+            <span class="stream-top"><span class="stream-platform">PLUTO TV</span></span>
+            <span hidden>
+              <span class="stream-title">LOS CASAGRANDES</span>
+            </span>
+          </a>
+        </article>
+
+        <article class="stream-card reveal" data-type="cartoons" data-entity="yt" data-access="gratis">
+          <a class="stream-poster" href="https://www.youtube.com/@BajoterraWildBrain/playlists" target="_blank" rel="noopener noreferrer" aria-label="Explorar YT">
+            <span class="stream-access-badge"><span class="stream-platform">GRATIS</span></span>
+            <img class="stream-cover" src="img-streaming-1/BAJOTERRA.webp" alt="" loading="lazy" decoding="async">
+            <span class="stream-top"><span class="stream-platform">YT</span></span>
+            <span hidden>
+              <span class="stream-title">BAJOTERRA</span>
+            </span>
+          </a>
+        </article>
+
+        <article class="stream-card reveal" data-type="cartoons" data-brand="disney+" data-access="suscripcion">
+          <a class="stream-poster" href="https://www.disneyplus.com/es-co/browse/entity-b2cc4a87-ce26-4993-895d-6a725388fd45" target="_blank" rel="noopener noreferrer" aria-label="Explorar DISNEY+">
+            <span class="stream-access-badge"><span class="stream-platform">SUSCRIPCIÓN</span></span>
+            <img class="stream-cover" src="img-streaming-1/AMPHIBIA.webp" alt="" loading="lazy" decoding="async">
+            <span class="stream-top"><span class="stream-platform">DISNEY+</span></span>
+            <span hidden>
+              <span class="stream-title">AMPHIBIA</span>
+            </span>
+          </a>
+        </article>
+
+        <article class="stream-card reveal" data-type="cartoons" data-brand="hbo max" data-access="suscripcion">
+          <a class="stream-poster" href="https://www.hbomax.com/co/es/show/ad344ac7-bd24-4e71-a913-0bd5b50561a4" target="_blank" rel="noopener noreferrer" aria-label="Explorar HBO MAX">
+            <span class="stream-access-badge"><span class="stream-platform">SUSCRIPCIÓN</span></span>
+            <img class="stream-cover" src="img-streaming-1/GRIZZY-AND-THE-LEMMINGS.webp" alt="" loading="lazy" decoding="async">
+            <span class="stream-top"><span class="stream-platform">HBO MAX</span></span>
+            <span hidden>
+              <span class="stream-title">GRIZZY AND THE LEMMINGS</span>
+            </span>
+          </a>
+        </article>
+
+        <article class="stream-card reveal" data-type="cartoons" data-entity="rovio" data-access="gratis">
+          <a class="stream-poster" href="https://www.angrybirds.com/series/angry-birds-toons/" target="_blank" rel="noopener noreferrer" aria-label="Explorar ROVIO">
+            <span class="stream-access-badge"><span class="stream-platform">GRATIS</span></span>
+            <img class="stream-cover" src="img-streaming-1/ANGRY-BIRDS-TOONS.webp" alt="" loading="lazy" decoding="async">
+            <span class="stream-top"><span class="stream-platform">ROVIO</span></span>
+            <span hidden>
+              <span class="stream-title">ANGRY BIRDS TOONS</span>
+            </span>
+          </a>
+        </article>
+
+        <article class="stream-card reveal" data-type="cartoons" data-brand="pluto tv" data-access="gratis">
+          <a class="stream-poster" href="https://pluto.tv/latam/shows/pac-man-and-the-ghostly-adventures-ptv3/" target="_blank" rel="noopener noreferrer" aria-label="Explorar PLUTO TV">
+            <span class="stream-access-badge"><span class="stream-platform">GRATIS</span></span>
+            <img class="stream-cover" src="img-streaming-1/PACMAN-Y-LAS-AVENTURAS-FANTASMALES.webp" alt="" loading="lazy" decoding="async">
+            <span class="stream-top"><span class="stream-platform">PLUTO TV</span></span>
+            <span hidden>
+              <span class="stream-title">PACMAN Y LAS AVENTURAS FANTASMALES</span>
+            </span>
+          </a>
+        </article>
+
+        <article class="stream-card reveal" data-type="cartoons" data-brand="disney+" data-access="suscripcion">
+          <a class="stream-poster" href="https://www.disneyplus.com/es-co/browse/entity-3c3c0f8b-7366-4d15-88ab-18050285978e" target="_blank" rel="noopener noreferrer" aria-label="Explorar DISNEY+">
+            <span class="stream-access-badge"><span class="stream-platform">SUSCRIPCIÓN</span></span>
+            <img class="stream-cover" src="img-streaming-1/FAMILY-GUY.webp" alt="" loading="lazy" decoding="async">
+            <span class="stream-top"><span class="stream-platform">DISNEY+</span></span>
+            <span hidden>
+              <span class="stream-title">FAMILY GUY | PADRE DE FAMILIA</span>
+            </span>
+          </a>
+        </article>
+
+        <article class="stream-card reveal" data-type="cartoons" data-brand="disney+" data-access="suscripcion">
+          <a class="stream-poster" href="https://www.disneyplus.com/es-co/browse/entity-79f140c4-c27f-42ab-8c8b-7a277e17ac76" target="_blank" rel="noopener noreferrer" aria-label="Explorar DISNEY+">
+            <span class="stream-access-badge"><span class="stream-platform">SUSCRIPCIÓN</span></span>
+            <img class="stream-cover" src="img-streaming-1/GRANDES-HEROES-LA-SERIE.webp" alt="" loading="lazy" decoding="async">
+            <span class="stream-top"><span class="stream-platform">DISNEY+</span></span>
+            <span hidden>
+              <span class="stream-title">GRANDES HEROES LA SERIE | BIG HERO 6 THE SERIE</span>
+            </span>
+          </a>
+        </article>
+
+        <article class="stream-card reveal" data-type="cartoons" data-brand="pluto tv" data-access="gratis">
+          <a class="stream-poster" href="https://pluto.tv/latam/shows/paw-patrol-lt/" target="_blank" rel="noopener noreferrer" aria-label="Explorar PLUTO TV">
+            <span class="stream-access-badge"><span class="stream-platform">GRATIS</span></span>
+            <img class="stream-cover" src="img-streaming-1/PAW-PATROL.webp" alt="" loading="lazy" decoding="async">
+            <span class="stream-top"><span class="stream-platform">PLUTO TV</span></span>
+            <span hidden>
+              <span class="stream-title">PAW PATROL</span>
+            </span>
+          </a>
+        </article>
+
+        <article class="stream-card reveal" data-type="cartoons" data-brand="disney+" data-access="suscripcion">
+          <a class="stream-poster" href="https://www.disneyplus.com/es-co/browse/entity-b7833196-8dab-411e-8728-46759d8402ba" target="_blank" rel="noopener noreferrer" aria-label="Explorar DISNEY+">
+            <span class="stream-access-badge"><span class="stream-platform">SUSCRIPCIÓN</span></span>
+            <img class="stream-cover" src="img-streaming-1/LA-GUARDIA-DEL-LEON.webp" alt="" loading="lazy" decoding="async">
+            <span class="stream-top"><span class="stream-platform">DISNEY+</span></span>
+            <span hidden>
+              <span class="stream-title">LA GUARDIA DEL LEÓN</span>
+            </span>
+          </a>
+        </article>
+
+        <article class="stream-card reveal" data-type="cartoons" data-brand="disney+" data-access="suscripcion">
+          <a class="stream-poster" href="https://www.disneyplus.com/es-co/browse/entity-5d2b13bf-d8de-4877-9b8d-2f73419757d0" target="_blank" rel="noopener noreferrer" aria-label="Explorar DISNEY+">
+            <span class="stream-access-badge"><span class="stream-platform">SUSCRIPCIÓN</span></span>
+            <img class="stream-cover" src="img-streaming-1/ELENA-DE-AVALOR.webp" alt="" loading="lazy" decoding="async">
+            <span class="stream-top"><span class="stream-platform">DISNEY+</span></span>
+            <span hidden>
+              <span class="stream-title">ELENA DE AVALOR</span>
+            </span>
+          </a>
+        </article>
+
+        <article class="stream-card reveal" data-type="cartoons" data-brand="disney+" data-access="suscripcion">
+          <a class="stream-poster" href="https://www.disneyplus.com/es-co/browse/entity-bc455c45-a11d-43fe-ac7d-3afdfc264909" target="_blank" rel="noopener noreferrer" aria-label="Explorar DISNEY+">
+            <span class="stream-access-badge"><span class="stream-platform">SUSCRIPCIÓN</span></span>
+            <img class="stream-cover" src="img-streaming-1/LA-PRINCESA-SOFIA.webp" alt="" loading="lazy" decoding="async">
+            <span class="stream-top"><span class="stream-platform">DISNEY+</span></span>
+            <span hidden>
+              <span class="stream-title">LA PRINCESA SOFIA</span>
+            </span>
+          </a>
+        </article>
+
+        <article class="stream-card reveal" data-type="cartoons" data-brand="disney+" data-access="suscripcion">
+          <a class="stream-poster" href="https://www.disneyplus.com/es-co/browse/entity-e6d3337a-4efc-4143-97e1-afc505a40a48" target="_blank" rel="noopener noreferrer" aria-label="Explorar DISNEY+">
+            <span class="stream-access-badge"><span class="stream-platform">SUSCRIPCIÓN</span></span>
+            <img class="stream-cover" src="img-streaming-1/DOCTORA-JUGUETES.webp" alt="" loading="lazy" decoding="async">
+            <span class="stream-top"><span class="stream-platform">DISNEY+</span></span>
+            <span hidden>
+              <span class="stream-title">DOCTORA JUGUETES</span>
+            </span>
+          </a>
+        </article>
+
+        <article class="stream-card reveal" data-type="cartoons" data-brand="hbo max" data-access="suscripcion">
+          <a class="stream-poster" href="https://www.hbomax.com/co/es/show/408be30a-8d73-4663-964b-edd023043e46" target="_blank" rel="noopener noreferrer" aria-label="Explorar HBO MAX">
+            <span class="stream-access-badge"><span class="stream-platform">SUSCRIPCIÓN</span></span>
+            <img class="stream-cover" src="img-streaming-1/POCOYO.webp" alt="" loading="lazy" decoding="async">
+            <span class="stream-top"><span class="stream-platform">HBO MAX</span></span>
+            <span hidden>
+              <span class="stream-title">POCOYO</span>
+            </span>
+          </a>
+        </article>
+
+        <article class="stream-card reveal" data-type="cartoons" data-brand="pluto tv" data-access="gratis">
+          <a class="stream-poster" href="https://pluto.tv/latam/shows/caillou-2/" target="_blank" rel="noopener noreferrer" aria-label="Explorar PLUTO TV">
+            <span class="stream-access-badge"><span class="stream-platform">GRATIS</span></span>
+            <img class="stream-cover" src="img-streaming-1/CAILLOU.webp" alt="" loading="lazy" decoding="async">
+            <span class="stream-top"><span class="stream-platform">PLUTO TV</span></span>
+            <span hidden>
+              <span class="stream-title">CAILLOU</span>
+            </span>
+          </a>
+        </article>
+
+        <article class="stream-card reveal" data-type="cartoons" data-brand="hbo max" data-access="suscripcion">
+          <a class="stream-poster" href="https://www.hbomax.com/co/es/show/a39f1a7f-a89f-4d82-9978-4096dc15242f" target="_blank" rel="noopener noreferrer" aria-label="Explorar HBO MAX">
+            <span class="stream-access-badge"><span class="stream-platform">SUSCRIPCIÓN</span></span>
+            <img class="stream-cover" src="img-streaming-1/DOKI.webp" alt="" loading="lazy" decoding="async">
+            <span class="stream-top"><span class="stream-platform">HBO MAX</span></span>
+            <span hidden>
+              <span class="stream-title">DOKI</span>
+            </span>
+          </a>
+        </article>
+
+        <article class="stream-card reveal" data-type="cartoons" data-brand="hbo max" data-access="suscripcion">
+          <a class="stream-poster" href="https://www.hbomax.com/co/es/show/18dca434-bbcb-45d0-b24f-3bf3c8b1460d" target="_blank" rel="noopener noreferrer" aria-label="Explorar HBO MAX">
+            <span class="stream-access-badge"><span class="stream-platform">SUSCRIPCIÓN</span></span>
+            <img class="stream-cover" src="img-streaming-1/44-GATOS.webp" alt="" loading="lazy" decoding="async">
+            <span class="stream-top"><span class="stream-platform">HBO MAX</span></span>
+            <span hidden>
+              <span class="stream-title">44 GATOS</span>
+            </span>
+          </a>
+        </article>
+        
+        <article class="stream-card reveal" data-type="cartoons" data-brand="pluto tv" data-access="gratis">
+          <a class="stream-poster" href="https://pluto.tv/latam/shows/wild-kratts-ptv3/" target="_blank" rel="noopener noreferrer" aria-label="Explorar PLUTO TV">
+            <span class="stream-access-badge"><span class="stream-platform">GRATIS</span></span>
+            <img class="stream-cover" src="img-streaming-1/AVENTURAS-CON-LOS-KRATTS.webp" alt="" loading="lazy" decoding="async">
+            <span class="stream-top"><span class="stream-platform">PLUTO TV</span></span>
+            <span hidden>
+              <span class="stream-title">AVENTURAS CON LOS KRATTS | WILD KRATTS</span>
+            </span>
+          </a>
+        </article>
+
+        <article class="stream-card reveal" data-type="cartonns" data-brand="pluto tv" data-access="gratis">
+          <a class="stream-poster" href="https://pluto.tv/latam/shows/jelly-jamm-latam/" target="_blank" rel="noopener noreferrer" aria-label="Explorar PLUTO TV">
+            <span class="stream-access-badge"><span class="stream-platform">GRATIS</span></span>
+            <img class="stream-cover" src="img-streaming-1/JELLY-JAMM.webp" alt="" loading="lazy" decoding="async">
+            <span class="stream-top"><span class="stream-platform">PLUTO TV</span></span>
+            <span hidden>
+              <span class="stream-title">JELLY JAMM</span>
+            </span>
+          </a>
+        </article>
+
+        <article class="stream-card reveal" data-type="cartoons" data-brand="hbo max" data-access="suscripcion">
+          <a class="stream-poster" href="https://www.hbomax.com/co/es/show/53ce822b-3b43-4779-aee7-121648d21d73" target="_blank" rel="noopener noreferrer" aria-label="Explorar HBO MAX">
+          <span class="stream-access-badge"><span class="stream-platform">SUSCRIPCIÓN</span></span>
+            <img class="stream-cover" src="img-streaming-1/EL-MUNDO-DE-LUNA.webp" alt="" loading="lazy" decoding="async">
+            <span class="stream-top"><span class="stream-platform">HBO MAX</span></span>
+            <span hidden>
+              <span class="stream-title">EL MUNDO DE LUNA</span>
+            </span>
+          </a>
+        </article>
+
+        <article class="stream-card reveal" data-type="cartoons" data-brand="prime video" data-access="suscripcion">
+          <a class="stream-poster" href="https://www.primevideo.com/-/es/detail/0U48P3BUPVYFH9GGOG0QBEMRKL" target="_blank" rel="noopener noreferrer" aria-label="Explorar PRIME VIDEO">
+            <span class="stream-access-badge"><span class="stream-platform">SUSCRIPCIÓN</span></span>
+            <img class="stream-cover" src="img-streaming-1/ZACK-Y-QUACK.webp" alt="" loading="lazy" decoding="async">
+            <span class="stream-top"><span class="stream-platform">PRIME VIDEO</span></span>
+            <span hidden>
+              <span class="stream-title">ZACK Y QUACK</span>
+            </span>
+          </a>
+        </article>
+
+        <article class="stream-card reveal" data-type="cartoons" data-entity="rtvcplay" data-access="gratis">
+          <a class="stream-poster" href="https://rtvcplay.co/ninos/puerto-papel" target="_blank" rel="noopener noreferrer" aria-label="Explorar RTVCPLAY">
+            <span class="stream-access-badge"><span class="stream-platform">GRATIS</span></span>
+            <img class="stream-cover" src="img-streaming-1/PUERTO-PAPEL.webp" alt="" loading="lazy" decoding="async">
+            <span class="stream-top"><span class="stream-platform">RTVCPLAY</span></span>
+            <span hidden>
+              <span class="stream-title">PUERTO PAPEL</span>
+            </span>
+          </a>
+        </article>
+
+        <article class="stream-card reveal" data-type="cartoons" data-entity="rtvcplay" data-access="gratis">
+          <a class="stream-poster" href="https://rtvcplay.co/ninos/pipo-mi-amigo-imaginario" target="_blank" rel="noopener noreferrer" aria-label="Explorar RTVCPLAY">
+            <span class="stream-access-badge"><span class="stream-platform">GRATIS</span></span>
+            <img class="stream-cover" src="img-streaming-1/PIPO-MI-AMIGO-IMAGINARIO.webp" alt="" loading="lazy" decoding="async">
+            <span class="stream-top"><span class="stream-platform">RTVCPLAY</span></span>
+            <span hidden>
+              <span class="stream-title">PIPO MI AMIGO IMAGINARIO</span>
+            </span>
+          </a>
+        </article>
+
+        <article class="stream-card reveal" data-type="cartoons" data-entity="animaccord" data-access="gratis">
+          <a class="stream-poster" href="https://mashabear.com/es-co/cartoons/temporada-1" target="_blank" rel="noopener noreferrer" aria-label="Explorar ANIMACCORD">
+            <span class="stream-access-badge"><span class="stream-platform">GRATIS</span></span>
+            <img class="stream-cover" src="img-streaming-1/MASHA-Y-EL-OSO.webp" alt="" loading="lazy" decoding="async">
+            <span class="stream-top"><span class="stream-platform">ANIMACCORD</span></span>
+            <span hidden>
+              <span class="stream-title">MASHA Y EL OSO</span>
+            </span>
+          </a>
+        </article>
+
+        <article class="stream-card reveal" data-type="cartoons" data-entity="rtvcplay" data-access="gratis">
+          <a class="stream-poster" href="https://rtvcplay.co/ninos/don-quijote-de-la-lactea" target="_blank" rel="noopener noreferrer" aria-label="Explorar RTVCPLAY">
+            <span class="stream-access-badge"><span class="stream-platform">GRATIS</span></span>
+            <img class="stream-cover" src="img-streaming-1/DON-QUIJOTE-DE-LA-LACTEA.webp" alt="" loading="lazy" decoding="async">
+            <span class="stream-top"><span class="stream-platform">RTVCPLAY</span></span>
+            <span hidden>
+              <span class="stream-title">DON QUITOTE DE LA LACTEA</span>
+            </span>
+          </a>
+        </article>
+
+        <article class="stream-card reveal" data-type="cartoons" data-brand="disney+" data-access="suscripcion">
+          <a class="stream-poster" href="https://www.disneyplus.com/es-co/browse/entity-f81c88a7-4713-44a4-a8ce-f91405b40233" target="_blank" rel="noopener noreferrer" aria-label="Explorar DISNEY+">
+            <span class="stream-access-badge"><span class="stream-platform">SUSCRIPCIÓN</span></span>
+            <img class="stream-cover" src="img-streaming-1/CARS-TOON-MATE.webp" alt="" loading="lazy" decoding="async">
+            <span class="stream-top"><span class="stream-platform">DISNEY+</span></span>
+            <span hidden>
+              <span class="stream-title">CARS TOON MATE</span>
+            </span>
+          </a>
+        </article>
+
+        <article class="stream-card reveal" data-type="cartoons" data-entity="animaccord" data-access="gratis">
+          <a class="stream-poster" href="https://mashabear.com/es-co/cartoons/las-historias-espeluznantes-de-masha" target="_blank" rel="noopener noreferrer" aria-label="Explorar ANIMACCORD">
+            <span class="stream-access-badge"><span class="stream-platform">GRATIS</span></span>
+            <img class="stream-cover" src="img-streaming-1/LAS-HISTORIAS-ESPELUZNANTES-DE-MASHA.webp" alt="" loading="lazy" decoding="async">
+            <span class="stream-top"><span class="stream-platform">ANIMACCORD</span></span>
+            <span hidden>
+              <span class="stream-title">LAS HISTORIAS ESPELUZNANTES DE MASHA</span>
+            </span>
+          </a>
+        </article>
+
+        <article class="stream-card reveal" data-type="cartoons" data-entity="animaccord" data-access="gratis">
+          <a class="stream-poster" href="https://mashabear.com/es-co/cartoons/los-cuentos-de-masha" target="_blank" rel="noopener noreferrer" aria-label="Explorar ANIMACCORD">
+            <span class="stream-access-badge"><span class="stream-platform">GRATIS</span></span>
+            <img class="stream-cover" src="img-streaming-1/LOS-CUENTOS-DE-MASHA.webp" alt="" loading="lazy" decoding="async">
+            <span class="stream-top"><span class="stream-platform">ANIMACCORD</span></span>
+            <span hidden>
+              <span class="stream-title">LOS CUENTOS DE MASHA</span>
+            </span>
+          </a>
+        </article>
+
+        <article class="stream-card reveal" data-type="cartoons" data-entity="rtvcplay" data-access="gratis">
+          <a class="stream-poster" href="https://rtvcplay.co/series-ficcion/mr-trance" target="_blank" rel="noopener noreferrer" aria-label="Explorar RTVCPLAY">
+            <span class="stream-access-badge"><span class="stream-platform">GRATIS</span></span>
+            <img class="stream-cover" src="img-streaming-1/MR-TRANCE.webp" alt="" loading="lazy" decoding="async">
+            <span class="stream-top"><span class="stream-platform">RTVCPLAY</span></span>
+            <span hidden>
+              <span class="stream-title">MR TRANCE</span>
+            </span>
+          </a>
+        </article>
+
+      </div>
+
+      <p class="catalog-empty-state" id="catalogEmptyState" role="status" hidden>No encontramos series que coincidan con esa búsqueda y esos filtros.</p>
+
+      <div class="stream-pagination-wrap stream-pagination-wrap--bottom">
+        <nav class="stream-pagination" aria-label="Paginación inferior del catálogo"></nav>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-copy" tabindex="0" role="button" aria-label="Copyright de Rionimex">Copyright © 2025-2026. RIONIMEX. TODOS LOS DERECHOS RESERVADOS.</div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/catalogo.js"></script>
+</body>
+</html>
